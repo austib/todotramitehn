@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoTramiteHN - Impacto y Estrategia 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        .gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .card { background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+        .tab-btn.active { background-color: #2563eb; color: #ffffff; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <!-- Enlace directo del Logo de Google Drive con fallback local dinámico -->
+                    <img src="https://lh3.googleusercontent.com/d/1f1Ln79djH-ClsjHFmRMDK0iUf1s7hv1h" alt="TodoTramiteHN" class="h-14 w-auto object-contain" onerror="this.onerror=null; this.src='logo todotramitehn_2.jpg';">
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600 items-center">
+                    <a href="#stats" class="hover:text-blue-600 transition-colors">Eficiencia</a>
+                    <a href="#services" class="hover:text-blue-600 transition-colors">Servicios</a>
+                    <a href="#growth" class="hover:text-blue-600 transition-colors">Expansión</a>
+                    <a href="#process" class="hover:text-blue-600 transition-colors">Proceso</a>
+                    <a href="https://www.facebook.com/61582419057308/" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1.5 font-bold" title="Síguenos en Facebook">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="gradient-bg py-16 px-4 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 italic">Devolviéndote el tiempo que la burocracia te quita.</h1>
+            <p class="text-xl opacity-90 font-light">Presentamos nuestro análisis estratégico de gestión, eficiencia y crecimiento de mercado en Honduras y el extranjero.</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-16">
+        
+        <section class="card overflow-hidden border border-gray-100 bg-white">
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                <div class="lg:col-span-7 p-6 md:p-8 space-y-6">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider font-bold">Portafolio Oficial</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-blue-900 leading-tight">Tu enlace confiable con todas las instituciones del país</h2>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Gestionamos de forma segura, ágil y transparente tus trámites en entidades gubernamentales, consulares y privadas de Honduras. Con cobertura total en registros vehiculares, licencias comerciales, tributación y gestiones de marcas.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="flex items-center space-x-2 text-sm text-gray-700">
+                            <span class="text-blue-500 text-xl">🛡️</span>
+                            <span class="font-semibold">Confidencialidad</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-gray-700">
+                            <span class="text-orange-500 text-xl">⏳</span>
+                            <span class="font-semibold">Agilidad</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-gray-700">
+                            <span class="text-blue-700 text-xl">🤝</span>
+                            <span class="font-semibold">Transparencia</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20quisiera%20realizar%20una%20consulta%20sobre%20sus%20servicios" target="_blank" class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-md hover:shadow-lg gap-2 text-base w-full sm:w-auto">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.588 1.936 14.111.91 11.487.91c-5.442 0-9.866 4.372-9.87 9.802 0 1.714.475 3.387 1.378 4.881L1.94 20.897l5.411-1.417c.003 0 .004-.001.006-.001zM17.3 14.39c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.18.2-.35.23-.65.08-.3-.15-1.27-.47-2.42-1.5-1-.89-1.67-1.99-1.87-2.33-.2-.3-.02-.47.13-.62.14-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.38-.01-.58-.01-.2 0-.52.07-.8.37-.27.3-1.03 1.01-1.03 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.07 4.48.71.3 1.26.49 1.69.63.71.23 1.36.19 1.88.11.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35z"/>
+                            </svg>
+                            ¡Escríbenos por WhatsApp!
+                        </a>
+                        <a href="https://www.facebook.com/61582419057308/" target="_blank" class="inline-flex items-center justify-center bg-[#1877F2] hover:bg-blue-800 text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-md hover:shadow-lg gap-2 text-base w-full sm:w-auto">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Síguenos en Facebook
+                        </a>
+                    </div>
+                </div>
+                <!-- Columna derecha para la Imagen Promocional Oficial de TodoTramiteHN -->
+                <div class="lg:col-span-5 relative bg-slate-900 flex items-center justify-center min-h-[300px] lg:min-h-[480px]">
+                    <img src="https://lh3.googleusercontent.com/d/1DmV4rx2f5od6skXAhTdzrBqW9OU-rc5f" alt="TodoTramiteHN Portafolio e Instituciones" class="w-full h-full object-cover max-h-[500px]" onerror="this.onerror=null; this.src='WhatsApp Image 2026-07-11 at 10.07.08 AM.jpg';">
+                    <div class="absolute inset-0 bg-blue-900 bg-opacity-10 hover:bg-opacity-0 transition-all pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card p-8 flex flex-col items-center text-center border-b-4 border-blue-500">
+                <span class="text-5xl font-black text-blue-600 mb-2">12,400+</span>
+                <h3 class="text-lg font-bold text-gray-700">Horas Ahorradas</h3>
+                <p class="text-sm text-gray-500 mt-2">Tiempo total que nuestros clientes han recuperado al no hacer filas en 2023.</p>
+            </div>
+            <div class="card p-8 flex flex-col items-center text-center border-b-4 border-orange-500">
+                <span class="text-5xl font-black text-orange-500 mb-2">98%</span>
+                <h3 class="text-lg font-bold text-gray-700">Índice de Confianza</h3>
+                <p class="text-sm text-gray-500 mt-2">Clientes que recomiendan nuestros servicios por rapidez y transparencia.</p>
+            </div>
+            <div class="card p-8 flex flex-col items-center text-center border-b-4 border-blue-800">
+                <span class="text-5xl font-black text-blue-800 mb-2">45+</span>
+                <h3 class="text-lg font-bold text-gray-700">Tipos de Trámites</h3>
+                <p class="text-sm text-gray-500 mt-2">Desde traspasos vehiculares hasta apostillas y asuntos consulares.</p>
+            </div>
+        </section>
+
+        <section id="services" class="space-y-8 scroll-mt-24">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Nuestros Servicios de Gestión</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-base">Filtra nuestro portafolio de soluciones corporativas y personales. Trámites rápidos, seguros y 100% garantizados.</p>
+            </div>
+
+            <!-- Filtros de Categorías -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+                <button onclick="filterServices('all')" class="tab-btn active px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-gray-200 text-gray-700 hover:bg-gray-300" id="btn-all">Todos</button>
+                <button onclick="filterServices('vehicular')" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-gray-200 text-gray-700 hover:bg-gray-300" id="btn-vehicular">🚙 Vehicular</button>
+                <button onclick="filterServices('negocios')" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-gray-200 text-gray-700 hover:bg-gray-300" id="btn-negocios">🏢 Negocios y SAR</button>
+                <button onclick="filterServices('consular')" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-gray-200 text-gray-700 hover:bg-gray-300" id="btn-consular">🌎 Consular y Migración</button>
+                <button onclick="filterServices('legal')" class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-gray-200 text-gray-700 hover:bg-gray-300" id="btn-legal">📜 Legal y Marcas</button>
+            </div>
+
+            <!-- Contenedor del Grid de Servicios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="services-grid">
+                
+                <!-- Vehicular 1 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="vehicular">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl font-bold mb-4">🚗</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">Traspasos de Vehículos</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Cambios de propietario de forma legal, rápida y segura ante el Instituto de la Propiedad (IP).</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20solicito%20información%20para%20un%20Traspaso%20de%20Vehículo" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+                <!-- Vehicular 2 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="vehicular">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-2xl font-bold mb-4">🪪</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">Renovación de Licencia</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Asesoría y agilización para la renovación física o digital de tu licencia de conducir en Tránsito.</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20necesito%20ayuda%20para%20Renovación%20de%20Licencia" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+                <!-- Negocios 1 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="negocios">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold mb-4">🏢</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">Permiso de Operación</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Apertura y renovación de tus permisos ante la Alcaldía Municipal para evitar multas de negocio.</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20solicito%20ayuda%20con%20el%20Permiso%20de%20Operación%20Municipal" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+                <!-- Negocios 2 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="negocios">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold mb-4">🧾</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">RTN e Inscripción SAR</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Gestiones fiscales completas, obtención y modificación de RTN Natural o Jurídico.</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20necesito%20tramitar%20un%20RTN%20o%20inscripción%20en%20el%20SAR" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+                <!-- Consular 1 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="consular">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-green-100 text-green-600 flex items-center justify-center text-2xl font-bold mb-4">🌎</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">Apostillas y Auténticas</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Legalización de firmas y documentos nacionales para uso internacional ante Cancillería.</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20requiero%20Apostillas%20y%20Auténticas%20para%20el%20extranjero" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+                <!-- Consular 2 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="consular">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-green-100 text-green-600 flex items-center justify-center text-2xl font-bold mb-4">🛂</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">Trámites de Migración</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Gestión de pasaportes, residencias, extensiones de visa y salidas de menores con total validez legal.</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20necesito%20apoyo%20con%20Trámites%20de%20Migración" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+                <!-- Legal 1 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="legal">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-4">🏷️</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">Registro de Marcas</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Protegemos tu identidad corporativa registrando tu marca y logotipo en la Dirección de Propiedad Intelectual.</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20solicito%20información%20para%20el%20Registro%20de%20Marca" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+                <!-- Legal 2 -->
+                <div class="card p-6 flex flex-col justify-between border border-gray-100 bg-white" data-category="legal">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-4">📂</div>
+                        <h4 class="font-bold text-lg text-blue-900 mb-2">Poderes y Escrituras</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Elaboración y protocolización de poderes especiales o generales para que un tercero actúe legalmente por ti.</p>
+                    </div>
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20requiero%20ayuda%20para%20redacción%20de%20Poderes%20y%20Escrituras" target="_blank" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 mt-2">
+                        Cotizar servicio &rarr;
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-6 bg-white border border-gray-100">
+                <h2 class="text-2xl font-bold mb-4 text-blue-900">Eficiencia: TodoTramiteHN vs. Autogestión</h2>
+                <p class="text-gray-600 mb-6 text-sm">Este gráfico compara el tiempo promedio (en horas) que un ciudadano pierde gestionando trámites comunes por su cuenta frente a nuestra gestión optimizada.</p>
+                <div class="chart-container">
+                    <canvas id="efficiencyChart"></canvas>
+                </div>
+                <p class="mt-4 text-xs font-semibold text-blue-600">★ Reducción promedio del 85% en tiempo de espera presencial.</p>
+            </div>
+
+            <div class="card p-6 bg-white border border-gray-100">
+                <h2 class="text-2xl font-bold mb-4 text-blue-900">Distribución de Demanda por Categoría</h2>
+                <p class="text-gray-600 mb-6 text-sm">Identificamos los pilares de servicio con mayor volumen. Los trámites vehiculares y municipales lideran la demanda local.</p>
+                <div class="chart-container">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+                <p class="mt-4 text-xs font-semibold text-orange-600">★ Los trámites municipales han crecido un 22% este trimestre.</p>
+            </div>
+        </section>
+
+        <section id="growth" class="card p-8 bg-white border border-gray-100">
+            <div class="max-w-3xl">
+                <h2 class="text-3xl font-bold mb-4 text-blue-900">Crecimiento de Servicios para el Extranjero</h2>
+                <p class="text-gray-600 mb-8">Nuestros compatriotas en EE.UU. y España representan el sector de mayor crecimiento. Esta tendencia muestra la necesidad de un puente legal confiable con Honduras.</p>
+            </div>
+            <div class="w-full h-[400px]">
+                <canvas id="growthChart"></canvas>
+            </div>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                <div class="flex items-center p-3 bg-blue-50 rounded-xl">
+                    <span class="mr-3 text-xl">🌎</span>
+                    <span>Conexión directa con consulados y oficinas gubernamentales en HN.</span>
+                </div>
+                <div class="flex items-center p-3 bg-orange-50 rounded-xl">
+                    <span class="mr-3 text-xl">📱</span>
+                    <span>Gestión 100% digital para hondureños fuera del territorio.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="space-y-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-blue-900">Nuestro Flujo "Cero Estrés"</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-2">Diseñamos un proceso lineal donde el cliente solo se involucra en los puntos críticos de decisión.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="relative p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                    <h4 class="font-bold text-blue-900">Consulta Inicial</h4>
+                    <p class="text-xs text-gray-500 mt-2">Evaluamos tu caso por WhatsApp o llamada sin compromiso.</p>
+                </div>
+                <div class="relative p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                    <h4 class="font-bold text-blue-900">Recolección</h4>
+                    <p class="text-xs text-gray-500 mt-2">Recogemos la documentación en tu casa u oficina.</p>
+                </div>
+                <div class="relative p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                    <h4 class="font-bold text-blue-900">Gestión Activa</h4>
+                    <p class="text-xs text-gray-500 mt-2">Hacemos las filas y trámites en las instituciones correspondientes.</p>
+                </div>
+                <div class="relative p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center">
+                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                    <h4 class="font-bold text-blue-900">Entrega Final</h4>
+                    <p class="text-xs text-gray-500 mt-2">Recibes tus documentos listos y validados donde prefieras.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-blue-950 text-white py-12 px-4 mt-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <!-- El logo oficial también aquí con fallback inteligente -->
+                <div class="bg-white p-3 rounded-xl inline-block mb-4 shadow-md max-w-[200px]">
+                    <img src="https://lh3.googleusercontent.com/d/1f1Ln79djH-ClsjHFmRMDK0iUf1s7hv1h" alt="TodoTramiteHN Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='logo todotramitehn_2.jpg';">
+                </div>
+                <p class="text-blue-200 mb-6">Líderes en gestión administrativa y legal en Honduras. Tu tiempo es nuestro compromiso.</p>
+                <div class="flex flex-wrap gap-2">
+                    <div class="px-4 py-2 bg-blue-800 rounded-full text-xs font-semibold">Tegucigalpa</div>
+                    <div class="px-4 py-2 bg-blue-800 rounded-full text-xs font-semibold">San Pedro Sula</div>
+                    <div class="px-4 py-2 bg-orange-600 rounded-full text-xs font-semibold">Servicio Global</div>
+                </div>
+            </div>
+            <div class="bg-blue-900 p-6 rounded-xl border border-blue-800 text-center space-y-4">
+                <p class="text-lg font-bold">¿Listo para olvidar las filas?</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                    <a href="https://wa.me/50499790088?text=Hola%20TodoTramiteHN,%20necesito%20asesoría%20con%20un%20trámite%20en%20Honduras" target="_blank" class="inline-flex flex-col items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded-lg transition-colors w-full sm:w-auto text-center leading-tight">
+                        <span class="text-xs font-semibold tracking-wider uppercase opacity-90">Contáctanos al WhatsApp</span>
+                        <span class="text-lg font-black mt-0.5 tracking-wide">+504 9979-0088</span>
+                    </a>
+                    <a href="https://www.facebook.com/61582419057308/" target="_blank" class="inline-flex items-center justify-center bg-[#1877F2] hover:bg-blue-800 text-white font-bold py-5 px-6 rounded-lg transition-colors w-full sm:w-auto gap-2 text-sm h-full">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Visítanos en Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-900 text-center text-blue-400 text-xs">
+            &copy; 2024 TodoTramiteHN. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Lógica de filtrado interactivo para la sección de servicios
+        function filterServices(category) {
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+
+            const activeBtn = document.getElementById('btn-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
+                activeBtn.classList.add('active', 'bg-blue-600', 'text-white');
+            }
+
+            const cards = document.querySelectorAll('#services-grid > div');
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex';
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.3s ease';
+                        card.style.opacity = '1';
+                    }, 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const wrapLabel = (label) => {
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > 16) {
+                    lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    return Array.isArray(label) ? label.join(' ') : label;
+                }
+            }
+        };
+
+        // Renderizado del Gráfico de Eficiencia
+        const ctxEfficiency = document.getElementById('efficiencyChart').getContext('2d');
+        new Chart(ctxEfficiency, {
+            type: 'bar',
+            data: {
+                labels: [wrapLabel('Traspaso de Vehículo'), wrapLabel('Permiso de Operación'), wrapLabel('Antecedentes Penales'), wrapLabel('Apostillado Documentos')],
+                datasets: [
+                    {
+                        label: 'Autogestión (Horas)',
+                        data: [12, 48, 6, 8],
+                        backgroundColor: '#94a3b8'
+                    },
+                    {
+                        label: 'TodoTramiteHN (Horas)',
+                        data: [1, 4, 0.5, 1],
+                        backgroundColor: '#2563eb'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: tooltipConfig, legend: { position: 'bottom' } },
+                scales: { y: { beginAtZero: true, title: { display: true, text: 'Horas Totales' } } }
+            }
+        });
+
+        // Renderizado del Gráfico de Distribución por Categoría
+        const ctxCategory = document.getElementById('categoryChart').getContext('2d');
+        new Chart(ctxCategory, {
+            type: 'doughnut',
+            data: {
+                labels: [wrapLabel('Vehicular'), wrapLabel('Municipal'), wrapLabel('Legal/Notarial'), wrapLabel('Consular/Diaspora')],
+                datasets: [{
+                    data: [35, 25, 20, 20],
+                    backgroundColor: ['#1e40af', '#3b82f6', '#f59e0b', '#64748b'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: tooltipConfig, legend: { position: 'right' } },
+                cutout: '70%'
+            }
+        });
+
+        // Renderizado del Gráfico de Crecimiento
+        const ctxGrowth = document.getElementById('growthChart').getContext('2d');
+        new Chart(ctxGrowth, {
+            type: 'line',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Solicitudes desde el Extranjero',
+                    data: [120, 150, 145, 190, 210, 250, 310, 340, 390, 420, 510, 580],
+                    borderColor: '#f59e0b',
+                    backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#f59e0b'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: tooltipConfig },
+                scales: { 
+                    y: { beginAtZero: true },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
